@@ -23,8 +23,10 @@ function iniciarApp() {
     botonesPaginador(); //Agrega o quita los botones del paginador
     paginaSiguiente();
     paginaAnterior();
+
     consultarAPI(); //Consulta la API en el backend de PHP
-    idCliente();
+
+    idCliente(); //Obtiene el id del Cliente desde la Sesion
     nombreCliente(); //Añade el nombre del cliente al objeto de cita
     seleccionarFecha(); //Añade fecha a la cita
     seleccionarHora(); //Añade la hora de la cita en el objeto
@@ -104,7 +106,7 @@ function paginaSiguiente() {
 
 async function consultarAPI() {
     try {
-        const url = '/api/servicios';
+        const url = `${location.origin}/api/servicios`;
         const resultado = await fetch(url);
         const servicios = await resultado.json();
         mostrarServicios(servicios);
@@ -319,7 +321,7 @@ async function reservarCita() {
 
     try {
         //Peticion hacia la api
-        const url = '/api/citas'
+        const url = `${location.origin}/api/citas`;
         const respuesta = await fetch(url, {
             method: 'POST',
             body: datos
