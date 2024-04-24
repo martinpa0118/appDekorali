@@ -25,11 +25,11 @@ class Email
         $phpmailer->SMTPAuth = true;
         $phpmailer->Port = $_ENV['EMAIL_PORT'];
         $phpmailer->Username = $_ENV['EMAIL_USER'];
-        $phpmailer->Password = $_ENV['EMAIL_PASS'];
+        $phpmailer->Password = $_ENV['EMAIL_PASSWORD'];
 
         //Configurar el contenido del email
-        $phpmailer->setFrom('cuentas@appdekorali.com');
-        $phpmailer->addAddress("cuentas@appdekorali.com", 'Appdekorali.com');
+        $phpmailer->setFrom('martin.pachon0118@gmail.com');
+        $phpmailer->addAddress("martin.pachon0118@gmail.com", 'Appdekorali.com');
         $phpmailer->Subject = 'Tienes un nuevo mensaje';
 
         //Habilitar HTML
@@ -56,11 +56,11 @@ class Email
         $phpmailer->SMTPAuth = true;
         $phpmailer->Port = $_ENV['EMAIL_PORT'];
         $phpmailer->Username = $_ENV['EMAIL_USER'];
-        $phpmailer->Password = $_ENV['EMAIL_PASS'];
+        $phpmailer->Password = $_ENV['EMAIL_PASSWORD'];
 
         //Configurar el contenido del email
-        $phpmailer->setFrom('cuentas@appdekorali.com');
-        $phpmailer->addAddress("cuentas@appdekorali.com", 'Appdekorali.com');
+        $phpmailer->setFrom('martin.pachon0118@gmail.com');
+        $phpmailer->addAddress("martin.pachon0118@gmail.com", 'Appdekorali.com');
         $phpmailer->Subject = 'Reestablece tu password';
 
         //Habilitar HTML
